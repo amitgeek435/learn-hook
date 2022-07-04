@@ -1,11 +1,27 @@
 // import logo from './logo.svg';
 import "./App.css";
+import ListGroup from "react-bootstrap/ListGroup";
+import ShortCircuitEval from "./components/ShortCircuitEval";
+import LoginForm from "./components/LoginForm";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <h1>Hello Hooks!...</h1>
+      <div className="container-fluid">
+        {/* <h1 className="text-center text-capitalize text-danger my-4">
+          Hello Hooks!...
+        </h1> */}
+        {/* <ListGroup>
+          <ListGroup.Item variant="primary">useState</ListGroup.Item>
+          <ListGroup.Item variant="secondary">useEffect</ListGroup.Item>
+          <ListGroup.Item variant="success">ShortCircuitEval</ListGroup.Item>
+          <ListGroup.Item variant="danger">Danger</ListGroup.Item>
+          <ListGroup.Item variant="warning">Warning</ListGroup.Item>
+          <ListGroup.Item variant="info">Info</ListGroup.Item>
+          <ListGroup.Item variant="dark">Dark</ListGroup.Item>
+        </ListGroup> */}
+        {/* <ShortCircuitEval /> */}
+        <LoginForm />
       </div>
     </>
   );
