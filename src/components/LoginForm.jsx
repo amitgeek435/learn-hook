@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
 const LoginForm = () => {
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
@@ -11,9 +14,15 @@ const LoginForm = () => {
 
   const submitform = (e) => {
     e.preventDefault();
-    const newEntry = { email: email, pass: pass };
-    setAllEntry([...allEntry, newEntry]);
-    console.log(allEntry);
+    // console.log(e.target);
+    if (email && pass) {
+      const newEntry = { id: new Date().getTime().toString(), email, pass };
+      setAllEntry([...allEntry, newEntry]);
+      setEmail("");
+      setPass("");
+    } else {
+      alert("Insert Email And Password");
+    }
   };
 
   return (
@@ -51,28 +60,21 @@ const LoginForm = () => {
           </div>
         </div>
         <div className="alldatarecord w-75 px-5">
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Email</th>
-                <th>Password</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {allEntry.map((curElm, ind) => {
-                  return (
-                    <>
-                      <td key={ind + 1}>{ind}</td>
-                      <td key={ind + 2}>{curElm.email}</td>
-                      <td key={ind + 3}>{curElm.pass}</td>
-                    </>
-                  );
-                })}
-              </tr>
-            </tbody>
-          </Table>
+          {allEntry.map((curElm, ind) => {
+            const { id, email, pass } = curElm;
+            return (
+              <>
+                <div
+                  key={id}
+                  className="bg-info d-flex justify-content-around border-bottom border-success"
+                >
+                  <div>{ind + 1}</div>
+                  <div>{email}</div>
+                  <div>{pass}</div>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
     </>

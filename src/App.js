@@ -3,6 +3,7 @@ import "./App.css";
 import ListGroup from "react-bootstrap/ListGroup";
 import ShortCircuitEval from "./components/ShortCircuitEval";
 import LoginForm from "./components/LoginForm";
+import Multipleinputs from "./components/forms/Multipleinputs";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <ListGroup.Item variant="dark">Dark</ListGroup.Item>
         </ListGroup> */}
         {/* <ShortCircuitEval /> */}
-        <LoginForm />
+        {/* <LoginForm /> */}
+        <Multipleinputs />
       </div>
     </>
   );
