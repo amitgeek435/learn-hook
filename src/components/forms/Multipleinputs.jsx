@@ -79,18 +79,20 @@ const Multipleinputs = () => {
           </button>
         </form>
         <div>
-          {urecords.map((celm) => {
+          {urecords.map((celm, i) => {
             const { id, username, email, password, phone } = celm;
             return (
-              <div
-                key={id}
-                className="bg-info d-flex justify-content-around border-bottom border-success"
-              >
-                <div>{username}</div>
-                <div>{email}</div>
-                <div>{password}</div>
-                <div>{phone}</div>
-              </div>
+              <>
+                <div
+                  key={id}
+                  className="bg-info d-flex justify-content-around border-bottom border-success"
+                >
+                  <div>{username}</div>
+                  <div>{email}</div>
+                  <div>{password}</div>
+                  <div>{phone}</div>
+                </div>
+              </>
             );
           })}
         </div>
