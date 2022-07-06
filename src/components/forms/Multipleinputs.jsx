@@ -15,6 +15,7 @@ const Multipleinputs = () => {
   };
   const formSubmit = (e) => {
     e.preventDefault();
+    console.log(userregister);
     const userData = { ...userregister, id: new Date().getTime().toString() };
     // console.log(userData);
     setuRecords([...urecords, userData]);
@@ -82,17 +83,16 @@ const Multipleinputs = () => {
           {urecords.map((celm, i) => {
             const { id, username, email, password, phone } = celm;
             return (
-              <>
-                <div
-                  key={id}
-                  className="bg-info d-flex justify-content-around border-bottom border-success"
-                >
-                  <div>{username}</div>
-                  <div>{email}</div>
-                  <div>{password}</div>
-                  <div>{phone}</div>
-                </div>
-              </>
+              <div
+                key={id}
+                className="bg-info d-flex justify-content-around border-bottom border-success"
+              >
+                <div>{i + 1}</div>
+                <div>{username}</div>
+                <div>{email}</div>
+                <div>{password}</div>
+                <div>{phone}</div>
+              </div>
             );
           })}
         </div>

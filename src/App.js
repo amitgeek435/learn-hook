@@ -4,6 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ShortCircuitEval from "./components/ShortCircuitEval";
 import LoginForm from "./components/LoginForm";
 import Multipleinputs from "./components/forms/Multipleinputs";
+import LearnClassCompo from "./components/LearnClassCompo";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         {/* <ShortCircuitEval /> */}
         {/* <LoginForm /> */}
         <Multipleinputs />
+        <LearnClassCompo />
       </div>
     </>
   );
