@@ -3,12 +3,14 @@ import "./App.css";
 // import ListGroup from "react-bootstrap/ListGroup";
 // import ShortCircuitEval from "./components/ShortCircuitEval";
 // import LoginForm from "./components/LoginForm";
-import Multipleinputs from "./components/forms/Multipleinputs";
-import LearnClassCompo from "./components/LearnClassCompo";
-import LearnuseEffect from "./components/useEffect/LearnuseEffect";
+// import Multipleinputs from "./components/forms/Multipleinputs";
+// import LearnClassCompo from "./components/LearnClassCompo";
+// import LearnuseEffect from "./components/useEffect/LearnuseEffect";
+// import UseEffectApi from "./components/useEffect/useEffectApi";
+import Uncontrolled from "./components/forms/Uncontrolled";
 
 function App() {
-  console.log(process.env.REACT_APP_SECRET_KEY);
+  console.log(`env access key :- ${process.env.REACT_APP_SECRET_KEY}`);
   return (
     <>
       <div className="container-fluid">
@@ -26,9 +28,11 @@ function App() {
         </ListGroup> */}
         {/* <ShortCircuitEval /> */}
         {/* <LoginForm /> */}
-        <Multipleinputs />
+        {/* <Multipleinputs /> */}
         {/* <LearnClassCompo /> */}
-        <LearnuseEffect />
+        {/* <LearnuseEffect /> */}
+        {/* <UseEffectApi /> */}
+        <Uncontrolled />
       </div>
     </>
   );
