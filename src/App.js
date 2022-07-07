@@ -1,12 +1,14 @@
 // import logo from './logo.svg';
 import "./App.css";
-import ListGroup from "react-bootstrap/ListGroup";
-import ShortCircuitEval from "./components/ShortCircuitEval";
-import LoginForm from "./components/LoginForm";
+// import ListGroup from "react-bootstrap/ListGroup";
+// import ShortCircuitEval from "./components/ShortCircuitEval";
+// import LoginForm from "./components/LoginForm";
 import Multipleinputs from "./components/forms/Multipleinputs";
 import LearnClassCompo from "./components/LearnClassCompo";
+import LearnuseEffect from "./components/useEffect/LearnuseEffect";
 
 function App() {
+  console.log(process.env.REACT_APP_SECRET_KEY);
   return (
     <>
       <div className="container-fluid">
@@ -25,7 +27,8 @@ function App() {
         {/* <ShortCircuitEval /> */}
         {/* <LoginForm /> */}
         <Multipleinputs />
-        <LearnClassCompo />
+        {/* <LearnClassCompo /> */}
+        <LearnuseEffect />
       </div>
     </>
   );
