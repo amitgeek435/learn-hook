@@ -14,7 +14,7 @@ import UseReducer from "./components/hooks/UseReducer";
 import CustomHooks from "./components/hooks/CustomHooks";
 
 function App() {
-  console.log(`env access key :- ${process.env.REACT_APP_SECRET_KEY}`);
+  //console.log(`env access key :- ${process.env.REACT_APP_SECRET_KEY}`);
   return (
     <>
       <div className="container-fluid">

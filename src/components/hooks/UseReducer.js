@@ -4,7 +4,7 @@ import { Divider } from "antd";
 
 const initialState = 0;
 const reducer = (count, action) => {
-  console.log(action);
+  // console.log(action);
   if (action.type === "INC") {
     return count + 1;
   }
