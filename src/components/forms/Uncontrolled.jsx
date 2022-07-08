@@ -11,6 +11,7 @@ const Uncontrolled = () => {
     e.preventDefault();
     const newNum = lnum.current.input.value;
     newNum === "" ? alert("Enter Num...") : setShow(true);
+    setShow(newNum);
   };
   return (
     <div className="site-card-border-less-wrapper">

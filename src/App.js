@@ -7,7 +7,11 @@ import "./App.css";
 // import LearnClassCompo from "./components/LearnClassCompo";
 // import LearnuseEffect from "./components/useEffect/LearnuseEffect";
 // import UseEffectApi from "./components/useEffect/useEffectApi";
-import Uncontrolled from "./components/forms/Uncontrolled";
+// import Uncontrolled from "./components/forms/Uncontrolled";
+import UseCallbackHook from "./components/hooks/UseCallback";
+import UseMemoHook from "./components/hooks/UseMemoHook";
+import UseReducer from "./components/hooks/UseReducer";
+import CustomHooks from "./components/hooks/CustomHooks";
 
 function App() {
   console.log(`env access key :- ${process.env.REACT_APP_SECRET_KEY}`);
@@ -32,7 +36,13 @@ function App() {
         {/* <LearnClassCompo /> */}
         {/* <LearnuseEffect /> */}
         {/* <UseEffectApi /> */}
-        <Uncontrolled />
+        {/* <Uncontrolled /> */}
+        <UseCallbackHook />
+        <UseMemoHook />
+        <div className="container">
+          <UseReducer />
+          <CustomHooks />
+        </div>
       </div>
     </>
   );
